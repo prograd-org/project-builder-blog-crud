@@ -1,8 +1,9 @@
 package controller;
 
 import java.io.IOException;
+
 import java.time.LocalDate;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -61,6 +62,7 @@ public class BlogController extends HttpServlet {
 		
 		CRUDOperations crud=new CRUDOperations();
 		List<Blog> listblog = crud.createBlog(blog);
+		Collections.sort(listblog,(m1,m2)->m1.getDate().compareTo(m2.getDate()));		
 
 		if(check) {
 			request.setAttribute("listBlog", listblog);
