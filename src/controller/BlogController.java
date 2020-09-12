@@ -63,8 +63,8 @@ public class BlogController extends HttpServlet {
 
 		if(check) {
 			request.setAttribute("listBlog", listblog);
-//			request.setAttribute("blog", blog);
-//			request.setAttribute("user",user);
+			request.setAttribute("blog", blog);
+			request.setAttribute("user",user);
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");
 			rd.forward(request, response);
 		}
