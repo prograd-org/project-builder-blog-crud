@@ -15,6 +15,10 @@ public class User {
 		this.date = date;
 	}
 
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getEmail() {
 		return email;
 	}

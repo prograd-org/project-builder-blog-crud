@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Blog;
 import model.User;
 import service.CRUDOperations;
-import service.ExcelFileStorage;
+
 import utility.CheckBlogPost;
 
 
@@ -38,19 +38,19 @@ public class BlogController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String blogDetails = request.getParameter("selectedAnswers");
-		System.out.println(blogDetails);
+	//	System.out.println(blogDetails);
 		
 		String[] userBlog=blogDetails.split(",");
 		String title = userBlog[0];
 		String description = userBlog[1];
 		LocalDate postedOn = LocalDate.now();
-		System.out.println(title);
-		System.out.println(description);
+	//	System.out.println(title);
+		//System.out.println(description);
 		
 		User user = null;
 		Blog blog=new Blog(title,description,postedOn);
-		System.out.println(title);
-		System.out.println(description);
+		//System.out.println(title);
+		//System.out.println(description);
 		
 		blog.setBlogTitle(title);
 		blog.setBlogDescription(description);
