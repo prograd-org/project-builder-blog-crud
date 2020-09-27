@@ -13,9 +13,11 @@ addBlog.onclick = () =>{
 	console.log("onclick");
 	document.getElementById('popup').style.display = "block";
 } 
-/*edit.onclick = () =>{
+edit.onclick = () =>{
+	console.log("onclick");
 	document.getElementById('popup').style.display = "block";
-}*/
+}
+
 //Function to Hide Popup
 function div_hide(){
 	document.getElementById('popup').style.display = "none";
