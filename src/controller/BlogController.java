@@ -14,14 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 import model.Blog;
 import model.User;
 import service.CRUDOperations;
-import service.ExcelFileStorage;
 import utility.CheckBlogPost;
 
 
 @WebServlet(urlPatterns= {"/blog"})
 public class BlogController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+      // CRUDOperations listobj = new CRUDOperations();
 
     public BlogController() {
         super();
@@ -60,7 +59,7 @@ public class BlogController extends HttpServlet {
 		boolean check=checkBlog.checkBlog(blog);
 		
 		CRUDOperations crud=new CRUDOperations();
-		List<Blog> listblog = crud.createBlog(blog);
+		List<Blog> listblog = crud.add(blog);
 
 		if(check) {
 			request.setAttribute("listBlog", listblog);
