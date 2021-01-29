@@ -15,15 +15,21 @@ public class CRUDOperations {
 	}
 	
 	public List<Blog> viewBlog(Blog blog) throws IOException{
-		return null;
+		for(Blog b:list) {
+			System.out.println(b);
+		}
+		return list;
 		
 	}
 	public List<Blog> updateBlog(Blog blog) throws IOException{
-		return null;
+		int index=list.indexOf(blog);
+		list.set(index,blog);
+		return list;
 	
 	}
 	public List<Blog> deleteBlog(Blog blog) throws IOException{
-		return null;
+		list.remove(blog);
+		return list;
 		
 	}
 }
